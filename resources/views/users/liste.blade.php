@@ -1,6 +1,6 @@
 @extends('layout.main')
 @section('title', 'liste')
-@section('titre', 'liste des utilisateurs')
+@section('titre', 'Liste des Utilisateurs')
 @section('contenu')
 @if (!empty($users))
     <table>
@@ -9,7 +9,7 @@
             <th>PRENOM</th>
             <th>NOM</th>
             <th>EMAIL</th>
-            <th>ADREES</th>
+            <th>ADRESSE</th>
             <th colspan="3">Actions</th>
         </tr>
         @foreach ($users as $user)
