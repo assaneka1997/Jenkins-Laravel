@@ -21,7 +21,7 @@
                 <input type="text" name="adresse" value="{{$users->adresse}}">
             </div>
             <div class="formItem">
-                <input type="submit" value="Modif>
+                <input type="submit" value="Modifier">
             </div>
         </form>
 @endsection
