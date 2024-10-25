@@ -28,7 +28,7 @@
         @endforeach
     </table>
 @else
-    <p>la liste est vide</p>
+    <p>la liste des utilisateurs est vide</p>
 @endif
 @endsection
 

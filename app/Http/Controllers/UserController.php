@@ -9,7 +9,9 @@ use Illuminate\Support\Facades\DB;
 class UserController extends Controller
 {
   public function index(){
+
     $users = DB::select("SELECT * FROM users");
+
     return view('users.liste', compact('users'));
   }
 
@@ -19,7 +21,7 @@ class UserController extends Controller
   public function store(){
     if (!empty(request('prenom'))&& !empty(request('nom'))&&
         !empty(request('email'))&& !empty(request('adresse'))) {
-            $users = DB::select('select * from users where email = ?', [request('email')]);
+            $users = DB::select('SELECT * FROM users WHERE email = ?', [request('email')]);
             if (empty($users)) {
                 $requete = 'INSERT INTO users(prenom, nom, email, adresse) VALUES (:prenom, :nom, :email, :adresse)';
                 $status= DB::insert($requete, [
